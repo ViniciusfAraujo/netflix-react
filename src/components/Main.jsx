@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaPlay } from "react-icons/fa";
+import { FiInfo } from "react-icons/fi";
 import requests from '../Requests'
 import axios from 'axios'
 
@@ -31,9 +32,9 @@ const Main = () => {
             <div className='absolute w-full top-[20%] p-4 md:p-8'>
                 <h1 className='text-3xl md:text-5xl'>{movie?.title}</h1>
                 <p className='w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-200'>{truncateString(movie?.overview, 150)}</p>
-                <div className='my-4'>
-                    <button className=' bg-gray-300 text-black font-semibold py-2 px-5 rounded'><FaPlay />Assitir</button>
-                    <button className=' bg-[#6d6d6eb3] text-white  py-2 px-5 ml-4 rounded'>Assista mais tarde</button>
+                <div className='my-4 flex'>
+                    <button className=' bg-gray-300 text-black font-semibold py-2 px-5 rounded flex justify-center items-center gap-2' ><FaPlay size={20}/>Assitir</button>
+                    <button className=' bg-[#6d6d6eb3] text-white  py-2 px-5 ml-4 rounded flex justify-center items-center gap-2'><FiInfo size={30} /> Assista mais tarde</button>
                 </div>
             </div>
         </div>
